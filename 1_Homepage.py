@@ -27,8 +27,8 @@ def recognize_from_mic():
 
 
 
-with open('proyectofinal/category_classifier1.pkl', 'rb') as f:
-    clf = pickle.load(f)
+#with open('proyectofinal/category_classifier1.pkl', 'rb') as f:
+ #   clf = pickle.load(f)
 
 with open('proyectofinal/category_vectorizer1.pkl', 'rb') as f:
     vectorizer = pickle.load(f)
