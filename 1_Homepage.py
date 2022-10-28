@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle 
+import pickle
 import azure.cognitiveservices.speech as speechsdk
 import requests, uuid
 from PIL import Image
@@ -39,13 +39,13 @@ st.set_page_config(
 )
 
 st.title("Sistema de Recomendación Amazon")
-st.write("Este proyecto...")
+
 
 if "my_input" not in st.session_state:
     st.session_state["my_input"] = ""
 
 
-submit = st.button("Grabadora de Voz")
+submit = st.button("¡Dejame escucharte!")
 if submit:
    
     resultado =recognize_from_mic()
@@ -99,9 +99,10 @@ if submit:
 
     prediccion =clf.predict(new_test)
     prediccion = prediccion[0]
-    st.title(traductor)
-    st.title(resultado)
-    st.title(prediccion)
+    
+    st.title(f'Texto de voz: {resultado}')
+    st.title(f'Traduccion: {traductor}')
+    st.title(f'Categoria: {prediccion}')
     
     
 
