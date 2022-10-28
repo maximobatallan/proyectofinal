@@ -27,7 +27,7 @@ def recognize_from_mic():
 
 
 
-with open('proyectofinal\category_classifier1.pkl', 'rb') as f:
+with open('proyectofinal/category_classifier1.pkl', 'rb') as f:
     clf = pickle.load(f)
 
 with open('proyectofinal/category_vectorizer1.pkl', 'rb') as f:
@@ -106,7 +106,7 @@ if submit:
     
 
 
-    df = pd.read_csv(f'proyectofinal\products\{prediccion}.csv')
+    df = pd.read_csv(f'proyectofinal/products/{prediccion}.csv')
     df1 =df['imUrl'].head(8)
     j = 0
     
