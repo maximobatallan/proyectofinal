@@ -25,13 +25,16 @@ def recognize_from_mic():
 
 
 
+clf = pickle.load(open('proyectofinal/modelo/category_classifier1.pkl', 'rb'))
 
 
-with open('proyectofinal/modelo/category_classifier1.pkl', 'r+b') as f:
-    clf = pickle.load(f)
+#with open('proyectofinal/modelo/category_classifier1.pkl', 'rb') as f:
+ #   clf = pickle.load(f)
 
-with open('proyectofinal/modelo/category_vectorizer1.pkl', 'r+b') as f:
-    vectorizer = pickle.load(f)
+vectorizer = pickle.load(open('proyectofinal/modelo/category_vectorizer1.pkl', 'rb'))
+
+#with open('proyectofinal/modelo/category_vectorizer1.pkl', 'rb') as f:
+ #   vectorizer = pickle.load(f)
 
 st.set_page_config(
     page_title="Proyecto Final",
