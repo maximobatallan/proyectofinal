@@ -5,7 +5,7 @@ import requests, uuid
 from PIL import Image
 import urllib.request
 import pandas as pd
-
+import joblib
 
 
 def recognize_from_mic():
@@ -24,14 +24,13 @@ def recognize_from_mic():
 
 
 
-
-clf = pickle.load(open('proyectofinal/modelo/category_classifier1.pkl', 'rb'))
+clf = joblib.load('proyectofinal/finalized_model.sav')
 
 
 #with open('proyectofinal/modelo/category_classifier1.pkl', 'rb') as f:
  #   clf = pickle.load(f)
 
-vectorizer = pickle.load(open('proyectofinal/modelo/category_vectorizer1.pkl', 'rb'))
+vectorizer = joblib.load('proyectofinal/vectorizar.sav')
 
 #with open('proyectofinal/modelo/category_vectorizer1.pkl', 'rb') as f:
  #   vectorizer = pickle.load(f)
