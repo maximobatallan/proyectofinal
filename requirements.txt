@@ -16,5 +16,5 @@ sklearn==0.0
 threadpoolctl==3.1.0
 webencodings==0.5.1
 wincertstore==0.2
-pywin32==302
+pywin32==228
 pandas==1.4.4
