@@ -100,9 +100,9 @@ def estadia():
                 else:
                     df.loc[df['Nombre'] == nombre, 'Domingo'] = 'No'
 
-                df1 = df[df['Nombre'] == nombre]
+                
                 df.to_csv('huespedes.csv',index=False)
-
+                df1 = df[df['Nombre'] == nombre]
                 st.dataframe(df1)
 
 
